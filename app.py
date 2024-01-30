@@ -18,7 +18,8 @@ import pandas as pd
 import numpy as np
 
 
-data = [line for line in open('c:/Users/jeanp/OneDrive/Documents/GitHub/ThorBot/thorlab_fewshots.json', 'r', encoding='utf-8')]
+data = [line for line in open('thorlab_fewshots.json', 'r', encoding='utf-8')]
+
 
 df = pd.read_json(data[0])
 

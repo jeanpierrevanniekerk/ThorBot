@@ -34,4 +34,5 @@ if [ $? -ne 0 ]; then
 fi
 
 
-# az webapp up --runtime PYTHON:3.10 --sku B1 --name 'thorbotfewshot' --resource-group 'AIPOC-ResourceGroup' --location 'East US' --subscription 'Pay-As-You-Go Dev/Test(Converted to EA)'
+# az webapp up --runtime PYTHON:3.11 --sku B1 --name 'thorbotfewshot' --resource-group 'AIPOC-ResourceGroup' --location 'East US' --subscription 'Pay-As-You-Go Dev/Test(Converted to EA)'
+# az webapp config appsettings set -g 'AIPOC-ResourceGroup' -n 'thorbotfewshot' --settings WEBSITE_WEBDEPLOY_USE_SCM=false
