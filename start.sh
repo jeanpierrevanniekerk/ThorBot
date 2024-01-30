@@ -4,7 +4,9 @@ echo ""
 echo "Restoring frontend npm packages"
 echo ""
 cd frontend
+
 npm install
+
 if [ $? -ne 0 ]; then
     echo "Failed to restore frontend npm packages"
     exit $?
@@ -25,8 +27,11 @@ cd ..
 echo ""
 echo "Starting backend"
 echo ""
-./.venv/bin/python -m flask run --port=5000 --host=127.0.0.1 --reload --debug
+./.venv/Scripts/python -m flask run --port=5000 --host=127.0.0.1 --reload --debug
 if [ $? -ne 0 ]; then
     echo "Failed to start backend"
     exit $?
 fi
+
+
+# az webapp up --runtime PYTHON:3.10 --sku B1 --name 'thorbotfewshot' --resource-group 'AIPOC-ResourceGroup' --location 'East US' --subscription 'Pay-As-You-Go Dev/Test(Converted to EA)'
